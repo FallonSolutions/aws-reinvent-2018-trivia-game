@@ -1,28 +1,28 @@
 # Trivia Backend API Service
 
-The trivia backend is a REST API that serves questions and answers.  A running example can be seen on [api.reinvent-trivia.com](https://api.reinvent-trivia.com/api/docs/).
+The trivia backend is a REST API that serves questions and answers.  A running example can be seen on [api.fspike.com](https://api.fspike.com/api/docs/).
 
 ## Prep
 
 Create an ECR repository for both the base Docker image and the application image.
 
 ```
-aws ecr create-repository --region us-east-1 --repository-name reinvent-trivia-backend
+aws ecr create-repository --region ap-southeast-2 --repository-name reinvent-trivia-backend
 
-aws ecr create-repository --region us-east-1 --repository-name reinvent-trivia-backend-base
+aws ecr create-repository --region ap-southeast-2 --repository-name reinvent-trivia-backend-base
 ```
 
 Create AWS Certificate Manager certificates for the 'api' and 'test-api' subdomains, then put the unique ARN of those certificates in an AWS Systems Manager Parameter Store parameter.
 
 ```
-aws ssm put-parameter --region us-east-1 --name CertificateArn-api.reinvent-trivia.com --type String --value arn:aws:acm:...
+aws ssm put-parameter --region ap-southeast-2 --name CertificateArn-api.fspike.com --type String --value arn:aws:acm:...
 
-aws ssm put-parameter --region us-east-1 --name CertificateArn-test-api.reinvent-trivia.com --type String --value arn:aws:acm:...
+aws ssm put-parameter --region ap-southeast-2 --name CertificateArn-test-api.fspike.com --type String --value arn:aws:acm:...
 ```
 
 ## Customize
 
-Replace all references to 'reinvent-trivia.com' with your own domain name.
+Replace all references to 'fspike.com' with your own domain name.
 
 # Docker images
 

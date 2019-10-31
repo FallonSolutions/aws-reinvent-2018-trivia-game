@@ -18,7 +18,7 @@ class TriviaGameBackendBaseImagePipeline extends cdk.Stack {
         const sourceOutput = new codepipeline.Artifact('SourceArtifact');
         const sourceAction = new actions.GitHubSourceAction({
             actionName: 'GitHubSource',
-            owner: 'aws-samples',
+            owner: 'FallonSolutions',
             repo: 'aws-reinvent-2018-trivia-game',
             oauthToken: githubAccessToken,
             output: sourceOutput
@@ -68,6 +68,6 @@ class TriviaGameBackendBaseImagePipeline extends cdk.Stack {
 
 const app = new cdk.App();
 new TriviaGameBackendBaseImagePipeline(app, 'TriviaGameBackendBaseImagePipeline', {
-    env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-1' }
+    env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'ap-southeast-2' }
 });
 app.synth();

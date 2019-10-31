@@ -35,12 +35,12 @@
                 ],
                 "prodTrafficRoute": {
                     "listenerArns": [
-                        "arn:aws:elasticloadbalancing:us-east-1:1234567890:listener/app/ecs-demo/1c70194522f801da/PLACEHOLDER"
+                        "arn:aws:elasticloadbalancing:ap-southeast-2:1234567890:listener/app/ecs-demo/1c70194522f801da/PLACEHOLDER"
                     ]
                 },
                 "testTrafficRoute": {
                     "listenerArns": [
-                        "arn:aws:elasticloadbalancing:us-east-1:1234567890:listener/app/ecs-demo/1c70194522f801da/PLACEHOLDER"
+                        "arn:aws:elasticloadbalancing:ap-southeast-2:1234567890:listener/app/ecs-demo/1c70194522f801da/PLACEHOLDER"
                     ]
                 }
             }

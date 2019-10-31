@@ -4,7 +4,7 @@ The static site calls into the API backend service to retrieve questions and ans
 
 ## Customize
 
-Replace all references to 'reinvent-trivia.com' with your own domain name.
+Replace all references to 'fspike.com' with your own domain name.
 
 ## Static Pages
 

@@ -17,12 +17,12 @@ In templates/ directory:
 Create a GitHub [personal access token](https://github.com/settings/tokens) with access to your fork of the repo, including "admin:repo_hook" and "repo" permissions.  Then store the token in Secrets Manager:
 
 ```
-aws secretsmanager create-secret --region us-east-1 --name TriviaGitHubToken --secret-string <my-github-personal-access-token>
+aws secretsmanager create-secret --region ap-southeast-2 --name TriviaGitHubToken --secret-string <my-github-personal-access-token>
 ```
 
 ## Customize
 
-Replace all references to 'aws-samples' with your own fork of this repo.  Replace all references to 'reinvent-trivia.com' with your own domain name.
+Replace all references to 'FallonSolutions' with your own fork of this repo.  Replace all references to 'fspike.com' with your own domain name.
 
 ## Deploy
 
@@ -45,7 +45,7 @@ cdk deploy --app 'node src/chat-bot-pipeline.js'
 To use CodeDeploy blue-green deployments instead of CloudFormation deployments for the API backend service, use the following instead of using the api-service-pipeline template listed above:
 
 ```
-aws cloudformation deploy --region us-east-1 --template-file templates/trivia-backend-codedeploy-blue-green.template.yaml --stack-name TriviaGameBackendPipeline --capabilities CAPABILITY_IAM
+aws cloudformation deploy --region ap-southeast-2 --template-file templates/trivia-backend-codedeploy-blue-green.template.yaml --stack-name TriviaGameBackendPipeline --capabilities CAPABILITY_IAM
 ```
 
 See the pipelines in the CodePipeline console.
